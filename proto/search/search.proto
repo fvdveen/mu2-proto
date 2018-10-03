@@ -4,6 +4,16 @@ service SearchService {
     rpc Search(SearchRequest) returns (SearchResponse) {}
 }
 
+message Error {
+    enum Type {
+        NIL = 0;
+    }
+
+    Type type = 1;
+    string message = 2;
+    Error cause = 3;
+}
+
 message Video {
     string name = 1;
     string url = 2;
@@ -16,5 +26,6 @@ message SearchRequest {
 }
 
 message SearchResponse {
-    Video video = 1;
+    Error error = 1;
+    Video video = 3;
 }
