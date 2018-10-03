@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service SearchService {
+    rpc Seach(SearchRequest) returns (SearchResponse) {}
+}
+
+message Video {
+    string name = 1;
+    string url = 2;
+    string id = 3;
+    string thumbnail = 4;
+}
+
+message SearchRequest {
+    string name = 1;
+}
+
+message SearchResponse {
+    Video video = 1;
+}
