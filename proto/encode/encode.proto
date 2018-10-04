@@ -4,21 +4,11 @@ service EncodeService {
     rpc Encode(EncodeRequest) returns (stream EncodeResponse) {}
 }
 
-message Error {
-    enum Type {
-        NIL = 0;
-    }
-
-    Type type = 1;
-    string message = 2;
-    Error cause = 3;
-}
-
 message EncodeRequest {
     string url = 1;
 }
 
 message EncodeResponse {
-    Error error = 1;
+    string url = 1;
     bytes opus = 2;
 }

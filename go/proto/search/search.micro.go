@@ -8,7 +8,6 @@ It is generated from these files:
 	proto/search/search.proto
 
 It has these top-level messages:
-	Error
 	Video
 	SearchRequest
 	SearchResponse

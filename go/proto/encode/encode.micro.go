@@ -8,7 +8,6 @@ It is generated from these files:
 	proto/encode/encode.proto
 
 It has these top-level messages:
-	Error
 	EncodeRequest
 	EncodeResponse
 */
