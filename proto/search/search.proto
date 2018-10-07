@@ -9,6 +9,7 @@ message Video {
     string url = 2;
     string id = 3;
     string thumbnail = 4;
+    string author = 5;
 }
 
 message SearchRequest {
